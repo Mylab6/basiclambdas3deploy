@@ -9,4 +9,9 @@ RUN yum install nodejs -y
 RUN yum install gcc-c++ make -y
 RUN curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo |  tee /etc/yum.repos.d/yarn.repo
 RUN yum install yarn -y
-# then you need to zip your function and push it 
+RUN yarn 
+# Do this BEFORE pushing your function to S3
+#RUN rm -rf .git 
+# then you need to zip your function and push it to S3
+#RUN zip -r lambdaFunc.zip .
+#RUN aws s3 cp lambdaFunc.zip s3://YOUR BUCKET NAME
