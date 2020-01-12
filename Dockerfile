@@ -9,3 +9,4 @@ RUN yum install nodejs -y
 RUN yum install gcc-c++ make -y
 RUN curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo |  tee /etc/yum.repos.d/yarn.repo
 RUN yum install yarn -y
+# then you need to zip your function and push it 
